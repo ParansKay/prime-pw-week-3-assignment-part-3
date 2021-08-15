@@ -27,35 +27,61 @@ console.log('5. Adding 25 to supplyChanges.');
 console.log( 'Supply changes are now: ', supplyChanges);
 
 // 6. Write a `for` loop that shows each value in the 'supplyChanges' array
-for( x=0; x<supplyChanges.length; x++ ){
-    console.log( supplyChanges[x] );
-    let shortcut = supplyChanges[x];
-    if( shortcut>0 ){
-        console.log( 'Added ', shortcut,'parts.' );
-    }
-    else if( shortcut===0 ){
-        console.log( 'No change.' );
-    }
-    else{
-        console.log( 'Removed ', shortcut, 'parts.');
-    }
-}
+
+
+// MY ORIGINAL ANSWER FOR Q 6:
+// for( x=0; x<supplyChanges.length; x++){
+//     if( supplyChanges[x]>0 ){
+//         console.log( 'Added ', supplyChanges[x], 'parts.' );
+//     }
+//     else if( supplyChanges[x] === 0 ){
+//         console.log( 'No change' );
+//     }
+//     else{
+//         console.log( 'Removed ', supplyChanges[x], 'parts.');
+//     }
+// };
 
 //    Use a console.log formatted as follows, where x is the value from the array
 //    - if it is a positive number (greater than 0), log 'Added x parts.' 
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
-console.log('6. Showing supplyChanges...');
+console.log('6. Showing supplyChanges...', supplyChanges );
 
 
 // STRETCH GOALS
-console.log('---  Stretch Goals  ---');
+//
 // 7. Rewrite the `for` loop from #6 as a `for of` loop. 
 console.log('7. Showing supplyChanges with "for of" loop');
+for( let sub of supplyChanges ){
+    console.log( sub );
+    if( sub>0 ){
+        console.log( 'Added ', sub, 'parts.' );
+    }   
+    else if( sub === 0 ){
+        console.log( 'No change' );
+    }
+    else{
+        console.log( 'Removed ', sub, 'parts.');
+    } 
+};
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
-console.log('8. Showing supplyChanges with "while" loop');
-
+// console.log('8. Showing supplyChanges with "while" loop');
+//     let x = 0;
+//     console.log( supplyChanges [x]);
+//     while( x < supplyChanges.length) {
+//         if( supplyChanges[x]>0 ){
+//         console.log( 'Added ', shortcut,'parts.' );
+//     }
+//     else if( supplyChanges[x] === 0 ){
+//         console.log( 'No change.' );
+//     }
+//     else{
+//         console.log( 'Removed ', shortcut, 'parts.');
+//     }
+//     break;
+// }
 
 // 9. Write a loop to determine the total number of parts available by
 //    adding up all the numbers in the 'supplyChanges' array.
